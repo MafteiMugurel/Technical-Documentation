@@ -95,6 +95,7 @@
                         place elements on an HTML form and respond to user events such as mouse clicks, form input, and
                         page navigation.
                     </li>
+                    <br>
                     <li>
                         Server-side JavaScript extends the core language by supplying objects relevant to running
                         JavaScript on a server. For example, server-side extensions allow an application to communicate
@@ -103,301 +104,365 @@
                     </li>
                 </ul>
             </article>
-
-            <section class="main-section" id="Statements">
-                <header>
-                    Statements
-                </header>
-                <article>
-                    <p>
-                        JavaScript applications consist of statements with an appropriate syntax. A single statement may
-                        span multiple lines. Multiple statements may occur on a single line if each statement is
-                        separated by a semicolon. This isn't a keyword, but a group of keywords.
-                    </p>
-                    <p>
-                        Semicolons separate JavaScript statements.
-                    </p>
-                    <ul>
-                        <li>
-                            Add a semicolon at the end of each executable statement:
-                            <code>
-                                var a, b, c; // Declare 3 variables
-                                a = 5; // Assign the value 5 to a
-                                b = 6; // Assign the value 6 to b
-                                c = a + b; // Assign the sum of a and b to c
-                            </code>
-                        </li>
-
-                        <li>
-                            When separated by semicolons, multiple statements on one line are allowed:
-                            <code>
-                                a = 5; b = 6; c = a + b;
-                            </code>
-                        </li>
-
-                    </ul>
-                </article>
-            </section>
-
-            <section class="main-section" id="Syntax">
-                <header>
-                    Syntax
-                </header>
-                <article>
-                    <p>
-                        JavaScript syntax is the set of rules, how JavaScript programs are constructed:
-                        <code>
-                            var x, y, z; // Declare Variables
-                            x = 5; y = 6; // Assign Values
-                            z = x + y; // Compute Values
-                        </code>
-                    </p>
-                </article>
-
-            </section>
-
-            <section class="main-section" id="Comments">
-                <header>
-                    Comments
-                </header>
-                <p>
-                    JavaScript comments can be used to explain JavaScript code, and to make it more readable.
-
-                    JavaScript comments can also be used to prevent execution, when testing alternative code.
-                </p>
-                <ul>
-                    <li>
-                        Single line comments start with //.
-
-                        Any text between // and the end of the line will be ignored by JavaScript (will not be
-                        executed).
-
-                        This example uses a single-line comment before each code line:
-                        <code>
-                            // Change heading:
-                            document.getElementById("myH").innerHTML = "My First Page";
-
-                            // Change paragraph:
-                            document.getElementById("myP").innerHTML = "My first paragraph.";
-                        </code>
-                    </li>
-                    <li>
-                        Multi-line comments start with /* and end with */.
-
-                        Any text between /* and */ will be ignored by JavaScript.
-
-                        This example uses a multi-line comment (a comment block) to explain the code:
-                        <code>
-                            /*
-                            The code below will change
-                            the heading with id = "myH"
-                            and the paragraph with id = "myP"
-                            in my web page:
-                            */
-                            document.getElementById("myH").innerHTML = "My First Page";
-                            document.getElementById("myP").innerHTML = "My first paragraph.";
-                        </code>
-                    </li>
-                </ul>
-
-            </section>
-
-            <section class="main-section" id="Variables">
-                <header>
-                    Variables
-                </header>
-                <p>
-                    JavaScript variables are containers for storing data values.
-
-                    In this example, x, y, and z, are variables, declared with the var keyword:
-                    <code>
-                        var x = 5;
-                        var y = 6;
-                        var z = x + y;
-                    </code>
-                </p>
-            </section>
-
-            <section class="main-section" id="Operators">
-                <header>
-                    Operators
-                </header>
-                <p>
-                    The assignment operator (=) assigns a value to a variable.
-                    <code>
-                        var x = 10;
-                    </code>
-                </p>
-                <p>
-                    The addition operator (+) adds numbers:
-                    <code>
-                        var x = 5;
-                        var y = 2;
-                        var z = x + y;
-                    </code>
-                </p>
-                <p>
-                    The multiplication operator (*) multiplies numbers.
-                    <code>
-                        var x = 5;
-                        var y = 2;
-                        var z = x * y;
-                    </code>
-                </p>
-            </section>
-
-            <section class="main-section" id="Arithmetic">
-                <header>
-                    Arithmetic
-                </header>
-                <p>
-                    Arithmetic operators perform arithmetic on numbers (literals or variables).
-
-                </p>
-            </section>
-
-            <section class="main-section" id="Assignment">
-                <header>
-                    Assignment
-                </header>
-                <p>
-                    Assignment operators assign values to JavaScript variables.
-                </p>
-            </section>
-
-            <section class="main-section" id="Data_Types">
-                <header>
-                    Data Types
-                </header>
-                <p>
-                    In programming, data types is an important concept.
-
-                    To be able to operate on variables, it is important to know something about the type.
-
-                    Without data types, a computer cannot safely solve this:
-                    <code>
-                        var x = 16 + "Volvo";
-                    </code>
-                </p>
-                <p>
-                    Does it make any sense to add "Volvo" to sixteen? Will it produce an error or will it produce a
-                    result?
-
-                    JavaScript will treat the example above as:
-                    <code>
-                        var x = "16" + "Volvo";
-                    </code>
-                </p>
-            </section>
-
-            <section class="main-section" id="Functions">
-                <header>
-                    Functions
-                </header>
-                <p>
-                    A JavaScript function is defined with the function keyword, followed by a name, followed by
-                    parentheses ().
-
-                    Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
-
-                    The parentheses may include parameter names separated by commas:
-                    (parameter1, parameter2, ...)
-
-                    The code to be executed, by the function, is placed inside curly brackets: {}
-
-                </p>
-                <p>
-                    Function Invocation
-                    The code inside the function will execute when "something" invokes (calls) the function:
-
-                    When an event occurs (when a user clicks a button)
-                    When it is invoked (called) from JavaScript code
-                    Automatically (self invoked)
-                </p>
-                <p>
-                    When JavaScript reaches a return statement, the function will stop executing.
-
-                    If the function was invoked from a statement, JavaScript will "return" to execute the code after the
-                    invoking statement.
-
-                    Functions often compute a return value. The return value is "returned" back to the "caller":
-                </p>
-            </section>
-
-            <section class="main-section" id="Objects">
-                <header>
-                    Objects
-                </header>
-                <p>
-                    You have already learned that JavaScript variables are containers for data values.
-
-                    This code assigns a simple value (Fiat) to a variable named car:
-                    <code>
-                        var car = "Fiat";
-                    </code>
-                </p>
-                <p>
-                    Objects are variables too. But objects can contain many values.
-
-                    This code assigns many values (Fiat, 500, white) to a variable named car:
-                    <code>
-                        var car = {type:"Fiat", model:"500", color:"white"};
-                    </code>
-                </p>
-            </section>
-
-            <section class="main-section" id="Events">
-                <header>
-                    Events
-                </header>
-                <p>
-                    Here are some examples of HTML events:
-
-                    An HTML web page has finished loading
-                    An HTML input field was changed
-                    An HTML button was clicked
-                    Often, when events happen, you may want to do something.
-
-                    JavaScript lets you execute code when events are detected.
-
-                    HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
-                </p>
-                <ul>
-                    <li>
-                        <p> In the following example, an onclick attribute (with code), is added to a <button> element:
-                        </p>
-
-                        <code>
-                            <button onclick="document.getElementById('demo').innerHTML = Date()">The time is? </button>
-                        </code>
-                    </li>
-                    
-                    <li>
-                        In the example above, the JavaScript code changes the content of the element with id="demo".
-
-                        In the next example, the code changes the content of its own element (using this.innerHTML):
-                        <code>
-                            <button onclick="this.innerHTML = Date()">The time is?</button>
-                        </code>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="main-section" id="Reference">
-                <header>
-                    Reference
-                </header>
-
-                <ul>
-                    <li>
-                        All the documentation in this page is taken from
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a>
-                        and
-                        <a href="https://www.w3schools.com/js/default.asp" target="_blank">w3schools</a>
-                    </li>
-                </ul>
-            </section>
         </section>
+        <section class="main-section" id="Statements">
+            <header>
+                Statements
+            </header>
+            <article>
+                <p>
+                    JavaScript applications consist of statements with an appropriate syntax. A single statement may
+                    span multiple lines. Multiple statements may occur on a single line if each statement is
+                    separated by a semicolon. This isn't a keyword, but a group of keywords.
+                </p>
+                <p>
+                    Semicolons separate JavaScript statements.
+                </p>
+                <ul>
+                    <li>
+                        Add a semicolon at the end of each executable statement:
+                        <br>
+                        <code>
+                            var a, b, c; // Declare 3 variables
+                        </code>
+                        <br>
+                        <code>
+                            a = 5; // Assign the value 5 to a
+                        </code>
+                        <br>
+                        <code>
+                            b = 6; // Assign the value 6 to b
+                        </code>
+                        <br>
+                        <code>
+                            c = a + b; // Assign the sum of a and b to c
+                        </code>
+
+                    </li>
+                    <br>
+                    <li>
+                        When separated by semicolons, multiple statements on one line are allowed:
+                        <br>
+                        <code>
+                            a = 5;
+                        </code>
+                        <br>
+                        <code>
+
+                            b = 6;
+                        </code>
+                        <br>
+                        <code>
+
+                            c = a + b;
+                        </code>
+                    </li>
+
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Syntax">
+            <header>
+                Syntax
+            </header>
+            <article>
+                <p>
+                    JavaScript syntax is the set of rules, how JavaScript programs are constructed:
+                    <br>
+                    <code>
+                        var x, y, z; // Declare Variables
+                    </code>
+                    <br>
+                    <code>
+                        x = 5; y = 6; // Assign Values
+                    </code>
+                    <br>
+                    <code>
+                        z = x + y; // Compute Values
+                    </code>
+                </p>
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Comments">
+            <header>
+                Comments
+            </header>
+            <p>
+                JavaScript comments can be used to explain JavaScript code, and to make it more readable.
+
+                JavaScript comments can also be used to prevent execution, when testing alternative code.
+            </p>
+            <ul>
+                <li>
+                    Single line comments start with //.
+
+                    Any text between // and the end of the line will be ignored by JavaScript (will not be
+                    executed).
+
+                    This example uses a single-line comment before each code line:
+                    <br>
+                    <code>
+                        // Change heading:
+                    </code>
+                    <br>
+                    <code>
+                        document.getElementById("myH").innerHTML = "My First Page";
+
+                    </code>
+                    <br>
+                    <code>
+                        // Change paragraph:
+                    </code>
+                    <br>
+                    <code>
+
+                        document.getElementById("myP").innerHTML = "My first paragraph.";
+                    </code>
+                </li>
+                <br>
+                <li>
+                    Multi-line comments start with /* and end with */.
+
+                    Any text between /* and */ will be ignored by JavaScript.
+
+                    This example uses a multi-line comment (a comment block) to explain the code:
+                    <br>
+                    <code>
+                        /*
+                        The code below will change
+                    </code>
+                    <br>
+                    <code>
+                        the heading with id = "myH"
+                    </code>
+                    <br>
+                    <code>
+                        and the paragraph with id = "myP"
+                    </code>
+                    <br>
+                    <code>
+                        in my web page:
+                        */
+                    </code>
+                    <br>
+                    <code>
+                        document.getElementById("myH").innerHTML = "My First Page";
+                    </code>
+                    <br>
+                    <code>
+                        document.getElementById("myP").innerHTML = "My first paragraph.";
+                    </code>
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="main-section" id="Variables">
+            <header>
+                Variables
+            </header>
+            <p>
+                JavaScript variables are containers for storing data values.
+
+                In this example, x, y, and z, are variables, declared with the var keyword:
+                <br>
+                <code>
+                    var x = 5;
+                </code>
+                <br>
+                <code>
+                    var y = 6;
+                </code>
+                <br>
+                <code>
+                    var z = x + y;
+                </code>
+            </p>
+        </section>
+
+        <section class="main-section" id="Operators">
+            <header>
+                Operators
+            </header>
+            <p>
+                The assignment operator (=) assigns a value to a variable.
+                <code>
+                    var x = 10;
+                </code>
+            </p>
+            <p>
+                The addition operator (+) adds numbers:
+                <code>
+                    var x = 5;
+                    var y = 2;
+                    var z = x + y;
+                </code>
+            </p>
+            <p>
+                The multiplication operator (*) multiplies numbers.
+                <code>
+                    var x = 5;
+                    var y = 2;
+                    var z = x * y;
+                </code>
+            </p>
+        </section>
+
+        <section class="main-section" id="Arithmetic">
+            <header>
+                Arithmetic
+            </header>
+            <p>
+                Arithmetic operators perform arithmetic on numbers (literals or variables).
+
+            </p>
+        </section>
+
+        <section class="main-section" id="Assignment">
+            <header>
+                Assignment
+            </header>
+            <p>
+                Assignment operators assign values to JavaScript variables.
+            </p>
+        </section>
+
+        <section class="main-section" id="Data_Types">
+            <header>
+                Data Types
+            </header>
+            <p>
+                In programming, data types is an important concept.
+
+                To be able to operate on variables, it is important to know something about the type.
+
+                Without data types, a computer cannot safely solve this:
+                <br>
+                <code>
+                    var x = 16 + "Volvo";
+                </code>
+            </p>
+            <p>
+                Does it make any sense to add "Volvo" to sixteen? Will it produce an error or will it produce a
+                result?
+
+                JavaScript will treat the example above as:
+                <br>
+                <code>
+                    var x = "16" + "Volvo";
+                </code>
+            </p>
+        </section>
+
+        <section class="main-section" id="Functions">
+            <header>
+                Functions
+            </header>
+            <p>
+                A JavaScript function is defined with the function keyword, followed by a name, followed by
+                parentheses ().
+
+                Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+                The parentheses may include parameter names separated by commas:
+                (parameter1, parameter2, ...)
+
+                The code to be executed, by the function, is placed inside curly brackets: {}
+
+            </p>
+            <p>
+                Function Invocation
+                The code inside the function will execute when "something" invokes (calls) the function:
+
+                When an event occurs (when a user clicks a button)
+                When it is invoked (called) from JavaScript code
+                Automatically (self invoked)
+            </p>
+            <p>
+                When JavaScript reaches a return statement, the function will stop executing.
+
+                If the function was invoked from a statement, JavaScript will "return" to execute the code after the
+                invoking statement.
+
+                Functions often compute a return value. The return value is "returned" back to the "caller":
+            </p>
+        </section>
+
+        <section class="main-section" id="Objects">
+            <header>
+                Objects
+            </header>
+            <p>
+                You have already learned that JavaScript variables are containers for data values.
+
+                This code assigns a simple value (Fiat) to a variable named car:
+                <br>
+                <code>
+                    var car = "Fiat";
+                </code>
+            </p>
+            <p>
+                Objects are variables too. But objects can contain many values.
+
+                This code assigns many values (Fiat, 500, white) to a variable named car:
+                <br>
+                <code>
+                    var car = {type:"Fiat", model:"500", color:"white"};
+                </code>
+            </p>
+        </section>
+
+        <section class="main-section" id="Events">
+            <header>
+                Events
+            </header>
+            <p>
+                Here are some examples of HTML events:
+
+                An HTML web page has finished loading
+                An HTML input field was changed
+                An HTML button was clicked
+                Often, when events happen, you may want to do something.
+
+                JavaScript lets you execute code when events are detected.
+
+                HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
+            </p>
+            <ul>
+                <li>
+                    <p> In the following example, an onclick attribute (with code), is added to a button element:
+                    </p>
+
+                   
+                </li>
+
+                <li>
+                    In the example above, the JavaScript code changes the content of the element with id="demo".
+
+                    In the next example, the code changes the content of its own element (using this.innerHTML):
+                    
+                </li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Reference">
+            <header>
+                Reference
+            </header>
+
+            <ul>
+                <li>
+                    All the documentation in this page is taken from
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a>
+                    and
+                    <a href="https://www.w3schools.com/js/default.asp" target="_blank">w3schools</a>
+                </li>
+            </ul>
+        </section>
+
     </main>
 </body>
 
